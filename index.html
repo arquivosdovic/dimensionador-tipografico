@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dimensionador Tipográfico Modular</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;700&family=JetBrains+Mono&family=Lato:wght@400;700&family=Lora:wght@400;700&family=Merriweather:wght@400;700&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&family=Oswald:wght@400;700&family=Playfair+Display:wght@400;700&family=Poppins:wght@400;700&family=Roboto:wght@400;700&family=Rubik:wght@400;700&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>📐 Dimensionador Tipográfico</h1>
+        <p>Defina a fonte base, a proporção e a unidade para criar uma escala tipográfica harmônica.</p>
+    </header>
+
+    <div class="controls-container">
+        <div class="control-group">
+            <label for="base-size">Tamanho Base:</label>
+            <input type="number" id="base-size" value="16" min="8" step="1">
+        </div>
+        
+        <div class="control-group">
+            <label for="unit">Unidade de Medida:</label>
+            <select id="unit">
+                <option value="px" selected>Pixel (px)</option>
+                <option value="pt">Ponto (pt)</option>
+                <option value="rem">REM (rem)</option>
+                <option value="em">EM (em)</option>
+            </select>
+        </div>
+
+        <div class="control-group">
+            <label for="scale-factor">Fator de Escala (Proporção):</label>
+            <select id="scale-factor">
+                <option value="1.067">Minor Second (1.067)</option>
+                <option value="1.125">Major Second (1.125)</option>
+                <option value="1.200" selected>Minor Third (1.200)</option>
+                <option value="1.250">Major Third (1.250)</option>
+                <option value="1.333">Perfect Fourth (1.333)</option>
+                <option value="1.500">Perfect Fifth (1.500)</option>
+                <option value="1.618">Golden Ratio (1.618)</option>
+            </select>
+        </div>
+        
+        <div class="control-group">
+            <label for="font-family">Fonte:</label>
+            <select id="font-family">
+                <option value="Arial, sans-serif">Arial</option>
+                <option value="'Bebas Neue', sans-serif">Bebas Neue</option>
+                <option value="Inter, sans-serif" selected>Inter</option>
+                <option value="'JetBrains Mono', monospace">JetBrains Mono</option>
+                <option value="Lato, sans-serif">Lato</option>
+                <option value="Lora, serif">Lora</option>
+                <option value="Merriweather, serif">Merriweather</option>
+                <option value="Montserrat, sans-serif">Montserrat</option>
+                <option value="'Open Sans', sans-serif">Open Sans</option>
+                <option value="Oswald, sans-serif">Oswald</option>
+                <option value="'Playfair Display', serif">Playfair Display</option>
+                <option value="Poppins, sans-serif">Poppins</option>
+                <option value="Roboto, sans-serif">Roboto</option>
+                <option value="Rubik, sans-serif">Rubik</option>
+                <option value="'Space Grotesk', sans-serif">Space Grotesk</option>
+                <option value="'Times New Roman', serif">Times New Roman</option>
+            </select>
+        </div>
+    </div>
+
+    <main id="scale-preview">
+        <h2>Visualização da Escala Tipográfica</h2>
+        </main>
+
+    <footer>
+        <p>A unidade Ponto (pt) é convertida usando a relação padrão: 1pt = 1.333px.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
